@@ -11,7 +11,6 @@ import shutil
 
 load_dotenv()
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-# print(openai_key)
 CHROMA_PATH = os.getenv("CHROMA_PATH")
 DATA_PATH = "data"
 
@@ -47,8 +46,8 @@ def save_to_chroma(chunks: list[Document]):
         chunks, GoogleGenerativeAIEmbeddings(model= "models/text-embedding-004"), persist_directory = CHROMA_PATH
     )
     # db = Chroma(persist_directory = CHROMA_PATH, embedding_function = GeminiEmbeddingFunction())
-    # db.add(chunks)
-    # db.persist()
+    db.add(chunks)
+    db.persist()
     print(f"Saved {len(chunks)} chunks in db at {CHROMA_PATH}")
 
 
