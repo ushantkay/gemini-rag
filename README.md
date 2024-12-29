@@ -7,7 +7,7 @@ Clone the repository:
 Setup python virtual env: 
 ```
 virtualenv venv/
-. venv/bin/activate
+env\scripts\activate
 ```
 
 Install required packages

@@ -46,7 +46,7 @@ def save_to_chroma(chunks: list[Document]):
         chunks, GoogleGenerativeAIEmbeddings(model= "models/text-embedding-004"), persist_directory = CHROMA_PATH
     )
     # db = Chroma(persist_directory = CHROMA_PATH, embedding_function = GeminiEmbeddingFunction())
-    db.add(chunks)
+    # db.add(chunks)
     db.persist()
     print(f"Saved {len(chunks)} chunks in db at {CHROMA_PATH}")
 
