@@ -14,6 +14,7 @@ Install required packages
 `pip install -r requirements.txt`
 
 create a .env file with the GOOGLE_API_KEY and CHROMA_PATH initialised
+https://ai.google.dev/gemini-api/docs/api-key
 create a data folder and add pdf files as the required data source
 from the root of the package run the following to create database and query
 
